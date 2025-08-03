@@ -1,14 +1,14 @@
 class AppConstants {
-  static ENV = process.env.NODE_ENV || "DEV";
+  static ENV = process.env.NODE_ENV ?? "PROD";
   static ACCESS_TOKEN_SECRET = "6HlEbB2S6sSGmxaA3HArg3RqaIADqUbY";
   static CANAL_MOBIL = "MOBIL";
   static REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET;
   static PORT = 3000;
+  static PUBLIC_URL = "https://portfolio-qaz5.onrender.com";
   static BASE_URL =
     AppConstants.ENV === "DEV"
       ? "http://localhost:" + AppConstants.PORT
       : AppConstants.PUBLIC_URL;
-  static PUBLIC_URL = "https://portfolio-qaz5.onrender.com";
   static DEFAULT_AVATAR = "default_male_avatar.png";
   static DEFAULT_AVATAR_ADMIN = "default_sad_avatar.png";
   static DEFAULT_WOMAN_ADMIN = "default_female_avatar.png";
