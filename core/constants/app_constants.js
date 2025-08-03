@@ -5,9 +5,9 @@ class AppConstants {
   static REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET;
   static PORT = 3000;
   static BASE_URL =
-    AppConstants.ENV === "PROD"
-      ? AppConstants.PUBLIC_URL
-      : "http://localhost:" + AppConstants.PORT;
+    AppConstants.ENV === "DEV"
+      ? "http://localhost:" + AppConstants.PORT
+      : AppConstants.PUBLIC_URL;
   static PUBLIC_URL = "https://portfolio-qaz5.onrender.com";
   static DEFAULT_AVATAR = "default_male_avatar.png";
   static DEFAULT_AVATAR_ADMIN = "default_sad_avatar.png";
