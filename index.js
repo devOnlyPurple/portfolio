@@ -23,5 +23,6 @@ cron.schedule("*/3 * * * *", async () => {
 app.use("/api/v1/file", file);
 
 app.listen(port, () => {
+  console.log("NODE_ENV:", AppConstants.ENV);
   console.log(`Serveur en marche sur ${AppConstants.BASE_URL}`);
 });
