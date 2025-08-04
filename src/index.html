@@ -231,7 +231,10 @@
 
                 <section class="portfolio-crev pt-0">
                     <div class="container">
-                        <div class="work-boxs">
+
+                        <div class="work-boxs" id="project-container"></div>
+
+                        <!-- <div class="work-boxs">
                             <div class="item active cursor-pointer">
                                 <div class="bg-img" data-background="assets/imgs/works/1/1.jpg">
                                     <div class="cont">
@@ -276,7 +279,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <br>
                         <div class="text-end mt-40">
                             <a href="page-about.html" class="butn bord-icon bord-gray">
@@ -999,7 +1002,52 @@
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
 
+    <script>
+        // fetch("/projects")
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data); // OK, les projets sont affichés
+        //     });
 
+
+        fetch("/projects")
+            .then(res => res.json())
+            .then(response => {
+                const container = document.getElementById("project-container");
+                container.innerHTML = ""; // Clear previous content
+                const projects = response.data;
+                projects.forEach((project, index) => {
+                    const activeClass = index === 0 ? "active" : "";
+
+                    const item = document.createElement("div");
+                    item.className = `item cursor-pointer ${activeClass}`;
+                    item.innerHTML = `
+            <div class="bg-img" data-background="${project.cover}">
+                <div class="cont">
+                    <div class="position-relative">
+                       <a href="/details/project?key=${project.key}" class="link-overlay"></a>
+                        <h5>${project.name}</h5>
+                        <span>${project.type}</span>
+                    </div>
+                </div>
+            </div>
+            `;
+
+                    container.appendChild(item);
+                });
+
+                // Initialiser le background si tu as un script JS qui le fait (genre jquery.backstretch ou autre)
+                document.querySelectorAll('.bg-img').forEach(el => {
+                    const bg = el.getAttribute("data-background");
+                    el.style.backgroundImage = `url(${bg})`;
+                });
+            })
+            .catch(err => {
+                console.error("Erreur lors du chargement des projets :", err);
+            });
+
+
+    </script>
 </body>
 
 
