@@ -103,7 +103,7 @@
                         <a class="nav-link" href="/"><span class="rolling-text">Acceuil</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/"><span class="rolling-text">A propos</span></a>
+                        <a class="nav-link" href="#about"><span class="rolling-text">A propos</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/"><span class="rolling-text">Projets</span></a>
@@ -168,8 +168,39 @@
 
 
                 <!-- ==================== Start intro ==================== -->
+                <section class="intro-style3" id="about">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-6">
+                                <div class="fit-img h-600px border-radius-15px o-hidden position-relative md-mb50">
+                                    <img src="https://res.cloudinary.com/dr8wumlkr/image/upload/v1754416208/portfolio/uyxtqmwh5lxcop1rbixp.jpg"
+                                        alt="">
 
-                <section class="intro-style1">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="v-align-between h-100">
+                                    <div>
+                                        <div class="sm-title-dote gray-text mb-20px">
+                                            <span>Qui suis-je?</span>
+                                        </div>
+                                        <p style="text-align: justify; font-weight: normal;">
+                                            Je développe des applications sur-mesure performantes, sécurisées et
+                                            adaptées à vos besoins métiers.
+                                            De la conception à la maintenance, je vous accompagne à chaque étape avec
+                                            rigueur : développement optimisé, intégration d’API, automatisations, tests
+                                            approfondis et support technique personnalisé.
+                                            Mon objectif : vous fournir des solutions fiables, évolutives et simples
+                                            d’utilisation pour booster votre activité.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- <section class="intro-style1">
                     <div class="container">
                         <div class="row justify-content-between">
                             <div class="col-lg-3 d-flex v-align-between md-mb50">
@@ -192,7 +223,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
 
 
                 <!-- ==================== End intro ==================== -->
@@ -205,53 +236,6 @@
                     <div class="container">
 
                         <div class="work-boxs" id="project-container"></div>
-
-                        <!-- <div class="work-boxs">
-                            <div class="item active cursor-pointer">
-                                <div class="bg-img" data-background="assets/imgs/works/1/1.jpg">
-                                    <div class="cont">
-                                        <div class="position-relative">
-                                            <a href="project-details.html" class="link-overlay"></a>
-                                            <h5>Cute Dog</h5>
-                                            <span>Photo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item cursor-pointer">
-                                <div class="bg-img" data-background="assets/imgs/works/1/2.jpg">
-                                    <div class="cont">
-                                        <div class="position-relative">
-                                            <a href="project-details.html" class="link-overlay"></a>
-                                            <h5>Aurora Pulse</h5>
-                                            <span>Branding</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item cursor-pointer">
-                                <div class="bg-img" data-background="assets/imgs/works/1/3.jpg">
-                                    <div class="cont">
-                                        <div class="position-relative">
-                                            <a href="project-details.html" class="link-overlay"></a>
-                                            <h5>Fusion Realm</h5>
-                                            <span>Branding</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item cursor-pointer">
-                                <div class="bg-img" data-background="assets/imgs/works/1/4.jpg">
-                                    <div class="cont">
-                                        <div class="position-relative">
-                                            <a href="project-details.html" class="link-overlay"></a>
-                                            <h5>Streetwear style</h5>
-                                            <span>Branding</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                         <br>
                         <div class="text-end mt-40">
                             <a href="page-about.html" class="butn bord-icon bord-gray">
@@ -269,7 +253,7 @@
 
                 <!-- ==================== Start Services ==================== -->
 
-                <section class="box-dark text-light">
+                <section class="box-dark text-light" id="services">
                     <div class="services-style1">
                         <div class="container">
                             <div class="row justify-content-between align-items-end mb-80px">
@@ -278,11 +262,11 @@
                                         <div class="sm-title-dote mb-20px">
                                             <span>Mes Services</span>
                                         </div>
-                                        <h2 class="fw-200">Transform brands <span class="fw-500">through
-                                                innovation</span></h2>
+                                        <h2 class="fw-200">Transformer <span class="fw-500">
+                                                vos idées en innovation concrète</span></h2>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <!-- <div class="col-lg-6">
                                     <div class="text">
                                         <p>Crafting data-driven strategies to elevate your online presence. I align your
                                             business goals with innovative digital solutions, ensuring measurable growth
@@ -291,7 +275,7 @@
                                             genius excuse. Deal say over you age from. Comparison new ham melancholy son
                                             themselves.</p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
@@ -306,12 +290,10 @@
                                                 </svg>
                                             </div>
                                             <h6 class="mb-25px">Développement web & mobile</h6>
-                                            <p class="fs-16">Crafting data-driven strategies to elevate your online
-                                                presence business goals.</p>
+                                            <p class="fs-16">Créer des solutions digitales efficaces pour booster votre
+                                                visibilité et atteindre vos objectifs.</p>
                                         </div>
-                                        <div class="more text-uppercase">
-                                            <a href="page-services.html">Discover More</a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -326,12 +308,9 @@
                                                 </svg>
                                             </div>
                                             <h6 class="mb-25px">Consulting digital & stratégie tech</h6>
-                                            <p class="fs-16">Crafting data-driven strategies to elevate your online
-                                                presence business goals.</p>
+                                            <p class="fs-16">Guider vos choix tech pour booster votre croissance.</p>
                                         </div>
-                                        <div class="more text-uppercase">
-                                            <a href="page-services.html">Discover More</a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -346,141 +325,52 @@
                                                 </svg>
                                             </div>
                                             <h6 class="mb-25px">Maintenance & support technique</h6>
-                                            <p class="fs-16">Crafting data-driven strategies to elevate your online
-                                                presence business goals.</p>
+                                            <p class="fs-16">Assurer la stabilité, résoudre les problèmes et maintenir
+                                                vos systèmes performants.</p>
                                         </div>
-                                        <div class="more text-uppercase">
-                                            <a href="page-services.html">Discover More</a>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="serv-item mb-40px">
+                                        <div class="cont">
+                                            <div class="img-icon w-60px mb-80px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="67" height="66"
+                                                    viewBox="0 0 67 66">
+                                                    <path
+                                                        d="M33 65.5C15.0794 65.5 0.5 50.9206 0.5 33C0.5 15.0794 15.0794 0.5 33 0.5C50.9206 0.5 65.5 15.0794 65.5 33C65.5 50.9206 50.9206 65.5 33 65.5ZM2.33692 37.1008C4.34878 52.2265 17.333 63.9337 33 63.9337C48.667 63.9337 61.6512 52.2265 63.6631 37.1008C62.0271 38.845 59.3284 40.4183 55.6897 41.712C49.6173 43.8711 41.5593 45.0602 33 45.0602C24.4408 45.0602 16.3829 43.8711 10.3103 41.712C6.67155 40.4181 3.97304 38.8448 2.33692 37.1008ZM2.06627 33C2.06627 35.6174 5.26239 38.255 10.835 40.2363C16.7434 42.337 24.6152 43.494 33 43.494C41.385 43.494 49.2566 42.337 55.165 40.2363C60.7376 38.255 63.9337 35.6174 63.9337 33C63.9337 15.9431 50.0569 2.06627 33 2.06627C15.9431 2.06627 2.06627 15.9431 2.06627 33Z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <h6 class="mb-25px">Formation & mentoring</h6>
+                                            <p class="fs-16">Accompagner vos équipes pour maîtriser outils et bonnes
+                                                pratiques.</p>
                                         </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="serv-item mb-40px">
+                                        <div class="cont">
+                                            <div class="img-icon w-60px mb-80px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="67" height="66"
+                                                    viewBox="0 0 67 66">
+                                                    <path
+                                                        d="M33 65.5C15.0794 65.5 0.5 50.9206 0.5 33C0.5 15.0794 15.0794 0.5 33 0.5C50.9206 0.5 65.5 15.0794 65.5 33C65.5 50.9206 50.9206 65.5 33 65.5ZM2.33692 37.1008C4.34878 52.2265 17.333 63.9337 33 63.9337C48.667 63.9337 61.6512 52.2265 63.6631 37.1008C62.0271 38.845 59.3284 40.4183 55.6897 41.712C49.6173 43.8711 41.5593 45.0602 33 45.0602C24.4408 45.0602 16.3829 43.8711 10.3103 41.712C6.67155 40.4181 3.97304 38.8448 2.33692 37.1008ZM2.06627 33C2.06627 35.6174 5.26239 38.255 10.835 40.2363C16.7434 42.337 24.6152 43.494 33 43.494C41.385 43.494 49.2566 42.337 55.165 40.2363C60.7376 38.255 63.9337 35.6174 63.9337 33C63.9337 15.9431 50.0569 2.06627 33 2.06627C15.9431 2.06627 2.06627 15.9431 2.06627 33Z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <h6 class="mb-25px">Automatisation des outils</h6>
+                                            <p class="fs-16">Automatiser vos processus et connecter vos outils
+                                                efficacement.</p>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="main-marq xlrg mt-80px mb-40px">
-                        <div class="slide-har st1 text-uppercase">
-                            <div class="box">
-                                <div class="item">
-                                    <h4>Our Experience by Professional Our Team.</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Our Experience by Professional Our Team.</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Our Experience by Professional Our Team.</h4>
-                                </div>
-                            </div>
-                            <div class="box">
-                                <div class="item">
-                                    <h4>Our Experience by Professional Our Team.</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Our Experience by Professional Our Team.</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Our Experience by Professional Our Team.</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-style1 pt-80px">
-                        <div class="container">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="fit-img h-350px border-radius-15px o-hidden">
-                                                <img src="assets/imgs/team/1.jpg" alt="">
-                                            </div>
-                                            <a href="page-team.html" class="icon">
-                                                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
-                                                        <path
-                                                            d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z"
-                                                            transform="translate(-0.75 -0.75)" />
-                                                    </svg></span>
-                                            </a>
-                                            <div class="text">
-                                                <h5 class="name">G. Martin</h5>
-                                                <h6 class="position">Director</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="fit-img h-350px border-radius-15px o-hidden">
-                                                <img src="assets/imgs/team/2.jpg" alt="">
-                                            </div>
-                                            <a href="page-team.html" class="icon">
-                                                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
-                                                        <path
-                                                            d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z"
-                                                            transform="translate(-0.75 -0.75)" />
-                                                    </svg></span>
-                                            </a>
-                                            <div class="text">
-                                                <h5 class="name">G. Martin</h5>
-                                                <h6 class="position">Director</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="fit-img h-350px border-radius-15px o-hidden">
-                                                <img src="assets/imgs/team/3.jpg" alt="">
-                                            </div>
-                                            <a href="page-team.html" class="icon">
-                                                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
-                                                        <path
-                                                            d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z"
-                                                            transform="translate(-0.75 -0.75)" />
-                                                    </svg></span>
-                                            </a>
-                                            <div class="text">
-                                                <h5 class="name">G. Martin</h5>
-                                                <h6 class="position">Director</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="fit-img h-350px border-radius-15px o-hidden">
-                                                <img src="assets/imgs/team/4.jpg" alt="">
-                                            </div>
-                                            <a href="page-team.html" class="icon">
-                                                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
-                                                        <path
-                                                            d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z"
-                                                            transform="translate(-0.75 -0.75)" />
-                                                    </svg></span>
-                                            </a>
-                                            <div class="text">
-                                                <h5 class="name">G. Martin</h5>
-                                                <h6 class="position">Director</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="fit-img h-350px border-radius-15px o-hidden">
-                                                <img src="assets/imgs/team/5.jpg" alt="">
-                                            </div>
-                                            <a href="page-team.html" class="icon">
-                                                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
-                                                        <path
-                                                            d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z"
-                                                            transform="translate(-0.75 -0.75)" />
-                                                    </svg></span>
-                                            </a>
-                                            <div class="text">
-                                                <h5 class="name">G. Martin</h5>
-                                                <h6 class="position">Director</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </section>
 
                 <!-- ==================== End Services ==================== -->
@@ -495,10 +385,10 @@
                             <div class="col-lg-4">
                                 <div>
                                     <div class="sm-title-dote gray-text mb-20px">
-                                        <span>Testimonials</span>
+                                        <span>Témoignages</span>
                                     </div>
-                                    <h2 class="fw-200 d-rotate wow"><span class="rotate-text">What People <span
-                                                class="fw-500">Say?</span></span></h2>
+                                    <h2 class="fw-200 d-rotate wow"><span class="rotate-text">Que disent les <span
+                                                class="fw-500">Clients?</span></span></h2>
                                 </div>
                             </div>
                             <div class="col-lg-8 position-relative">
@@ -517,23 +407,23 @@
                                                                     stroke="#222" stroke-width="1" opacity="0.322">
                                                                 </path>
                                                             </svg>
-                                                            <h4 class="fw-300">I have been hiring people in this
-                                                                space for a number of years
-                                                                and I have never seen this level of
-                                                                professionalism. It really feels like you are
-                                                                working with a team that can get the job
-                                                                done.</h4>
+                                                            <h4 class="fw-300">Ce qui distingue David, c’est sa capacité
+                                                                à comprendre les enjeux métiers et à proposer des
+                                                                solutions techniques précises, évolutives et solides. Il
+                                                                est aujourd’hui un partenaire clé dans le développement
+                                                                de Kondjigbale.</h4>
                                                         </div>
                                                         <div class="info d-flex align-items-center pt-40px mt-40px">
                                                             <div>
                                                                 <div class="fit-img">
-                                                                    <img src="assets/imgs/testim/1.jpg" alt="">
+                                                                    <img src="https://res.cloudinary.com/dr8wumlkr/image/upload/v1754421914/portfolio/oif4iob6fywwva1wu1me.jpg"
+                                                                        alt="">
                                                                 </div>
                                                             </div>
                                                             <div class="ml-20px">
-                                                                <h6>Adam Beckley</h6>
-                                                                <span class="fs-14 mt-5px opacity-6">Founder &
-                                                                    CEO</span>
+                                                                <h6>Yvon Koudam</h6>
+                                                                <span class="fs-14 mt-5px opacity-6">CEO & Cofondateur -
+                                                                    Kondjigbale / MDKR Labs</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -551,23 +441,23 @@
                                                                     stroke="#222" stroke-width="1" opacity="0.322">
                                                                 </path>
                                                             </svg>
-                                                            <h4 class="fw-300">I have been hiring people in this
-                                                                space for a number of years
-                                                                and I have never seen this level of
-                                                                professionalism. It really feels like you are
-                                                                working with a team that can get the job
-                                                                done.</h4>
+                                                            <h4 class="fw-300">Travailler avec David, c’est s’assurer
+                                                                d’une exécution rapide, d’une solution fiable et d’un
+                                                                accompagnement technique de grande qualité. Grâce à lui,
+                                                                Prestup a franchi un cap essentiel dans sa
+                                                                transformation digitale.</h4>
                                                         </div>
                                                         <div class="info d-flex align-items-center pt-40px mt-40px">
                                                             <div>
                                                                 <div class="fit-img">
-                                                                    <img src="assets/imgs/testim/2.jpg" alt="">
+                                                                    <img src="https://res.cloudinary.com/dr8wumlkr/image/upload/v1754421940/portfolio/cjgpm4mutctpeewna4ed.jpg"
+                                                                        alt="">
                                                                 </div>
                                                             </div>
                                                             <div class="ml-20px">
-                                                                <h6>Adam Beckley</h6>
-                                                                <span class="fs-14 mt-5px opacity-6">Founder &
-                                                                    CEO</span>
+                                                                <h6>Djibril Maham</h6>
+                                                                <span class="fs-14 mt-5px opacity-6">CEO & Fondateur -
+                                                                    CSIS (Prestup)</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -585,23 +475,23 @@
                                                                     stroke="#222" stroke-width="1" opacity="0.322">
                                                                 </path>
                                                             </svg>
-                                                            <h4 class="fw-300">I have been hiring people in this
-                                                                space for a number of years
-                                                                and I have never seen this level of
-                                                                professionalism. It really feels like you are
-                                                                working with a team that can get the job
-                                                                done.</h4>
+                                                            <h4 class="fw-300">Notre site reflète parfaitement l’image
+                                                                que nous voulions transmettre : professionnel, clair,
+                                                                moderne. David a été à l’écoute, réactif et force de
+                                                                proposition à chaque étape. Je le recommande sans
+                                                                hésiter.</h4>
                                                         </div>
                                                         <div class="info d-flex align-items-center pt-40px mt-40px">
                                                             <div>
                                                                 <div class="fit-img">
-                                                                    <img src="assets/imgs/testim/3.jpg" alt="">
+                                                                    <img src="https://res.cloudinary.com/dr8wumlkr/image/upload/v1754421087/portfolio/yqo1fasdqmrczjgoqxc0.jpg"
+                                                                        alt="">
                                                                 </div>
                                                             </div>
                                                             <div class="ml-20px">
-                                                                <h6>Adam Beckley</h6>
-                                                                <span class="fs-14 mt-5px opacity-6">Founder &
-                                                                    CEO</span>
+                                                                <h6>Hervé Talla Awui</h6>
+                                                                <span class="fs-14 mt-5px opacity-6">Fondateur – Ethica
+                                                                    Advisory</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -626,36 +516,7 @@
 
                 <!-- ==================== Start Intro ==================== -->
 
-                <section class="intro-style2 p-0">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 items">
-                                <div class="item text-align-center">
-                                    <h2>We</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 items">
-                                <div class="item text-align-center bg-img o-hidden"
-                                    data-background="assets/imgs/intro2.jpg" data-overlay-dark="5">
-                                    <h2>Create</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 items">
-                                <div class="item text-align-center bg-gr">
-                                    <img src="assets/imgs/long-arrow-right.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 items">
-                                <div class="item text-align-center bg-img" data-background="assets/imgs/intro1.webp">
-                                    <h2>Future <span class="bg-img"
-                                            data-background="assets/imgs/intro1.webp">Future</span>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </section>
 
                 <!-- ==================== End Intro ==================== -->
 
@@ -663,37 +524,7 @@
 
                 <!-- ==================== Start Intro ==================== -->
 
-                <section class="intro-style3">
-                    <div class="container">
-                        <div class="row justify-content-between">
-                            <div class="col-lg-6">
-                                <div class="fit-img h-600px border-radius-15px o-hidden position-relative md-mb50">
-                                    <img src="assets/imgs/intro/2.jpg" alt="">
-                                    <div class="play-button">
-                                        <a href="https://youtu.be/AzwC6umvd1s" class="vid">
-                                            <i class="fas fa-play"></i>
-                                            <span>Watch Video</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="v-align-between h-100">
-                                    <div>
-                                        <div class="sm-title-dote gray-text mb-20px">
-                                            <span>Who We Are?</span>
-                                        </div>
-                                        <h2>We craft & design digital experiences</h2>
-                                    </div>
-                                    <div class="pt-40px mt-40px line-top border-color-transparent-dark-light">
-                                        <p>Duis aute irure dolor in rere henderit in volua sint ocaecat cupidatat non
-                                            proent sun irem frinilla massa dignssim oner manis denis</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
 
                 <!-- ==================== End Intro ==================== -->
 
@@ -707,10 +538,11 @@
                             <div class="col-lg-6">
                                 <div>
                                     <div class="sm-title-dote mb-20px">
-                                        <span>Blog</span>
+                                        <span>Actualités</span>
                                     </div>
                                     <h2 class="fw-200 d-rotate wow animated" style="visibility: visible;"><span
-                                            class="rotate-text">Latest <span class="fw-500">News</span></span></h2>
+                                            class="rotate-text">Dernières <span class="fw-500">Nouvelles</span></span>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -719,13 +551,14 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="fit-img h-350px border-radius-15px o-hidden">
-                                            <img src="assets/imgs/blog/1.webp" alt="">
-                                            <a href="blog.html" class="date">
+                                            <img src="https://res.cloudinary.com/dr8wumlkr/image/upload/v1754418092/portfolio/ova7ew4zvudbb6j8ppsw.jpg"
+                                                alt="">
+                                            <a href="/blog/details" class="date">
                                                 <div class="d-flex align-items-center justify-content-center">
-                                                    <span><i>29</i> AUG</span>
+                                                    <span><i>27</i> JUL</span>
                                                 </div>
                                             </a>
-                                            <a href="blog-details.html" class="icon">
+                                            <a href="/blog/details" class="icon">
                                                 <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
                                                         <path
                                                             d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z"
@@ -736,17 +569,16 @@
                                         <div class="text">
                                             <div class="info fw-300 mb-15px d-flex align-items-center">
                                                 <div class="sm-title-dote mr-30px">
-                                                    <span class="opacity-6">Design</span>
+                                                    <span class="opacity-6">Hackathon</span>
                                                 </div>
-                                                <div>
-                                                    <span class="fs-14 opacity-6">By : Ethan Richards</span>
-                                                </div>
+
                                             </div>
-                                            <h6>The top Digital Marketing strategies for business growth</h6>
+                                            <h6>Mentorat, innovation et assurance : immersion au cœur du Hackathon CSIS
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <!-- <div class="swiper-slide">
                                     <div class="item">
                                         <div class="fit-img h-350px border-radius-15px o-hidden">
                                             <img src="assets/imgs/blog/4.jpg" alt="">
@@ -835,7 +667,7 @@
                                             <h6>Simple tips for effective social media marketing</h6>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -852,42 +684,25 @@
                             <div class="slide-har st1">
                                 <div class="box">
                                     <div class="item-marq">
-                                        <h2>Work</h2>
+                                        <h2>SOWA</h2>
                                     </div>
                                     <div class="item-marq">
-                                        <h2>Together</h2>
+                                        <h2>David</h2>
                                     </div>
                                     <div class="item-marq">
-                                        <h2>Work</h2>
+                                        <h2>Olalekou</h2>
                                     </div>
-                                    <div class="item-marq">
-                                        <h2>Together</h2>
-                                    </div>
-                                    <div class="item-marq">
-                                        <h2>Work</h2>
-                                    </div>
-                                    <div class="item-marq">
-                                        <h2>Together</h2>
-                                    </div>
+
                                 </div>
                                 <div class="box">
                                     <div class="item-marq">
-                                        <h2>Work</h2>
+                                        <h2>SOWA</h2>
                                     </div>
                                     <div class="item-marq">
-                                        <h2>Together</h2>
+                                        <h2>David</h2>
                                     </div>
                                     <div class="item-marq">
-                                        <h2>Work</h2>
-                                    </div>
-                                    <div class="item-marq">
-                                        <h2>Together</h2>
-                                    </div>
-                                    <div class="item-marq">
-                                        <h2>Work</h2>
-                                    </div>
-                                    <div class="item-marq">
-                                        <h2>Together</h2>
+                                        <h2>Olalekou</h2>
                                     </div>
                                 </div>
                             </div>
@@ -909,35 +724,15 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="item">
-                                    <h6 class="mb-30px">Boston, MA</h6>
-                                    <p class="fs-14 mb-5px">49 Brimmer St, Boston, MA 02108</p>
-                                    <p class="fs-14 mb-5px">hello@archin.co</p>
-                                    <p class="fs-14">(054) 3256 78 87</p>
+                                    <h6 class="mb-30px">Lomé, Togo</h6>
+                                    <p class="fs-14 mb-5px">Agoè-sogbossito</p>
+                                    <p class="fs-14 mb-5px">daviosowa9@gmail.com</p>
+                                    <p class="fs-14">(+228) 98 64 71 61 / 91 76 54 31</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="item">
-                                    <h6 class="mb-30px">Portland, OR</h6>
-                                    <p class="fs-14 mb-5px">2221 Sw Broadway Dr, Portland, OR 97201</p>
-                                    <p class="fs-14 mb-5px">portland@archin.co</p>
-                                    <p class="fs-14">(021) 4246 63 68</p>
-                                </div>
-                            </div>
+
                         </div>
-                        <div class="row mt-80px">
-                            <div class="col-md-6">
-                                <p class="fs-14">© 2025 Neofolio Agency. All Right Reserved</p>
-                            </div>
-                            <div class="col-md-6 d-flex justify-content-end">
-                                <div class="fs-14">
-                                    <a href="home-main.html" class="mr-30px">Home</a>
-                                    <a href="page-about.html" class="mr-30px">Studio</a>
-                                    <a href="page-work.html" class="mr-30px">Works</a>
-                                    <a href="blog.html" class="mr-30px">News</a>
-                                    <a href="page-contact.html" class="mr-30px">Contact</a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </footer>
 

@@ -39,6 +39,9 @@ app.get("/", (req, res) => {
 app.get("/details/project", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "details_project.html"));
 });
+app.get("/blog/details", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "blog-details.html"));
+});
 
 cron.schedule("*/3 * * * *", async () => {
   try {
