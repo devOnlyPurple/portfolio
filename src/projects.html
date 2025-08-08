@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from uithemez.com/i/neofolio/blog-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Aug 2025 23:07:07 GMT -->
+<!-- Mirrored from uithemez.com/i/neofolio/page-work.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Aug 2025 23:07:05 GMT -->
 
 <head>
 
@@ -14,6 +14,7 @@
         content="David Sowa, Sowa David, Olalekou David, Kedo Travel, Kondjigbale, PrestUp, Olalekou Sowa, développeur d'application, tech-entrepreneur">
     <meta name="description"
         content="David Olalekou Sowa, développeur d'applications et entrepreneur tech passionné par l'innovation digitale.">
+
     <meta name="author" content="David Olalekou Sowa - Développeur d'applications">
 
     <!-- Title  -->
@@ -106,7 +107,7 @@
                         <a class="nav-link" href="#about"><span class="rolling-text">A propos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/all_projects"><span class="rolling-text">Projets</span></a>
+                        <a class="nav-link" href="#"><span class="rolling-text">Projets</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/"><span class="rolling-text">Services</span></a>
@@ -135,89 +136,33 @@
             <main class="o-hidden">
 
 
-                <!-- ==================== Start header ==================== -->
+                <!-- ==================== Start Header ==================== -->
 
-                <header class="blog-header pt-80px">
+                <header class="pg-text-lg pt-80px">
                     <div class="container pt-80px">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-
-
-                                <div class="background bg-img mt-50px border-radius-15px" id="project-cover"
-                                    style="height: 400px; background-size: cover; background-position: center;"></div>
-                            </div>
+                        <div class="caption text-align-center">
+                            <h1>Projets</h1>
                         </div>
                     </div>
                 </header>
 
-                <!-- ==================== End header ==================== -->
+                <!-- ==================== End Header ==================== -->
 
 
 
-                <!-- ==================== Start Blogs ==================== -->
+                <!-- ==================== Start portfolio ==================== -->
 
-                <section class="pb-80px pt-80px">
+                <section class="portfolio-style4 pt-70px">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-                                <div class="main-post">
-                                    <div class="item pb-60px">
-                                        <article>
-                                            <div class="text">
-                                                <p id="project-description"> new
-                                                    report said earlier this week
-                                                    that Apple is working
-                                                    on a
-                                                    brand
-                                                    new laptop.
-                                                    Apple plans to release a 15-inch MacBook Air in 2023, a
-                                                    first for
-                                                    the Air
-                                                    series. A trusted Apple insider with a proven track
-                                                    record
-                                                    confirmed
-                                                    that Apple
-                                                    is working on the larger MacBook Air.</p>
-                                            </div>
-
-
-                                        </article>
-
-
-
-
-                                        <div class="mb-50px mt-50px">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="iner-img sm-mb30" id="first_project">
-                                                        <img src="..." alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="iner-img sm-mb30" id="second_project">
-                                                        <img src="..." alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                    </div>
-
-                                </div>
-
-                            </div>
+                        <div class="row md-marg gallery" id="project-container">
+                            <!-- Contenu dynamique injecté ici -->
                         </div>
                     </div>
                 </section>
 
-                <!-- ==================== End Blogs ==================== -->
+                <!-- ==================== End portfolio ==================== -->
 
 
-
-                <!-- ==================== Start Footer ==================== -->
 
 
                 <footer class="pt-80px pb-50px box-dark">
@@ -250,7 +195,7 @@
                             </div>
                         </div>
                         <a href="/contact" class="butn-call">
-                            <img src="/assets/imgs/arrow-top-right-dark.svg" alt="" class="w-50px">
+                            <img src="assets/imgs/arrow-top-right-dark.svg" alt="" class="w-50px">
                         </a>
                     </div>
                     <div class="container mt-80px">
@@ -310,43 +255,46 @@
 
     <!-- custom scripts -->
     <script src="/assets/js/scripts.js"></script>
+
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const params = new URLSearchParams(window.location.search);
-            const key = params.get("key");
-            fetch(`/project?key=${encodeURIComponent(key)}`)
-                .then(res => res.json())
-                .then(response => {
-                    const project = response.data;
-                    console.log(project);
 
-                    const coverElem = document.getElementById("project-cover");
-                    const firstImage = document.getElementById("first_project");
-                    const secondImage = document.getElementById("second_project");
-                    const img = firstImage.querySelector("img");
-                    const img2 = secondImage.querySelector("img");
-                    if (coverElem) {
-                        coverElem.setAttribute("data-background", project.cover);
-                        img.src = project.screen;
-                        img2.src = project.screen;
-                        // si tu veux appliquer le background en CSS immédiatement
-                        coverElem.style.backgroundImage = `url(${project.cover})`;
-                    } else {
-                        console.error("Element #project-cover introuvable !");
-                    }
+        fetch("/projects/all")
+            .then(res => res.json())
+            .then(response => {
+                const container = document.getElementById("project-container");
+                container.innerHTML = ""; // Clear previous content
+                const projects = response.data;
 
-                    const descElem = document.getElementById("project-description");
-                    if (descElem) {
-                        descElem.textContent = project.details.description;
-                    } else {
-                        console.error("Element #project-description introuvable !");
-                    }
+                projects.forEach((project) => {
+                    const col = document.createElement("div");
+                    col.className = "col-lg-4 items mt-50px";
+
+                    col.innerHTML = `
+        <div class="item">
+            <div class="fit-img h-450px o-hidden position-relative">
+                <img src="${project.cover}" alt="">
+                <a href="/details/project?key=${project.key}" class="link-overlay"></a>
+            </div>
+            <div class="mt-20px">
+                <h5>${project.name}</h5>
+                <div class="tags text-uppercase mt-10px">
+                    <a href="#">${project.type}</a>
+                </div>
+            </div>
+        </div>
+      `;
+
+                    container.appendChild(col);
                 });
-        });
+            })
+            .catch(err => {
+                console.error("Erreur lors du chargement des projets :", err);
+            });
+
     </script>
 </body>
 
 
-<!-- Mirrored from uithemez.com/i/neofolio/blog-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Aug 2025 23:07:07 GMT -->
+
 
 </html>

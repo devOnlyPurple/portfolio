@@ -16,6 +16,10 @@ app.get("/projects", async (req, res) => {
   const projects = await ApiRepository.getProjects();
   res.json(projects);
 });
+app.get("/projects/all", async (req, res) => {
+  const projects = await ApiRepository.getProjectsAll();
+  res.json(projects);
+});
 app.get("/project", async (req, res) => {
   const key = req.query.key; // récupère la clé envoyée dans l'URL, ex: /project?key=ma_clef
   if (!key) {
@@ -32,7 +36,7 @@ app.get("/ping", (req, res) => {
   console.log("PING__PING");
   res.status(200).json({ message: "pong" });
 });
-
+//start-site
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "index.html"));
 });
@@ -42,6 +46,13 @@ app.get("/details/project", (req, res) => {
 app.get("/blog/details", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "blog-details.html"));
 });
+app.get("/all_projects", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "projects.html"));
+});
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "contact.html"));
+});
+//end-site
 
 cron.schedule("*/3 * * * *", async () => {
   try {

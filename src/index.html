@@ -106,7 +106,7 @@
                         <a class="nav-link" href="#about"><span class="rolling-text">A propos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/"><span class="rolling-text">Projets</span></a>
+                        <a class="nav-link" href="/all_projects"><span class="rolling-text">Projets</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/"><span class="rolling-text">Services</span></a>
@@ -117,7 +117,7 @@
             </div>
 
             <div class="contact-button">
-                <a href="page-contact.html" class="butn border-radius-5px">
+                <a href="/contact" class="butn border-radius-5px">
                     <span class="text">Discutons-en</span>
                 </a>
             </div>
@@ -238,7 +238,7 @@
                         <div class="work-boxs" id="project-container"></div>
                         <br>
                         <div class="text-end mt-40">
-                            <a href="page-about.html" class="butn bord-icon bord-gray">
+                            <a href="/all_projects" class="butn bord-icon bord-gray">
                                 Voir plus
                                 <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span>
                             </a>
@@ -370,8 +370,69 @@
                             </div>
                         </div>
                     </div>
+                    <section class="skills p-0">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg col-md-4 col-sm-6">
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img">
+                                                <img src="assets/imgs/skills/flutter.png" alt="">
+                                            </div>
 
+                                        </div>
+                                        <h6>Flutter</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg col-md-4 col-sm-6">
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img">
+                                                <img src="assets/imgs/skills/nodejs.png" alt="">
+                                            </div>
+
+                                        </div>
+                                        <h6>Node js</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg col-md-4 col-sm-6">
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img">
+                                                <img src="assets/imgs/skills/reactjs.png" alt="">
+                                            </div>
+
+                                        </div>
+                                        <h6>React Js</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg col-md-4 col-sm-6">
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img">
+                                                <img src="assets/imgs/skills/Laravel.png" alt="">
+                                            </div>
+
+                                        </div>
+                                        <h6>Laravel</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg col-md-4 col-sm-6">
+                                    <div class="item">
+                                        <div class="box">
+                                            <div class="img">
+                                                <img src="assets/imgs/skills/s1.png" alt="">
+                                            </div>
+
+                                        </div>
+                                        <h6>Figma</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </section>
+
 
                 <!-- ==================== End Services ==================== -->
 
@@ -707,7 +768,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="page-contact.html" class="butn-call">
+                        <a href="/contact" class="butn-call">
                             <img src="assets/imgs/arrow-top-right-dark.svg" alt="" class="w-50px">
                         </a>
                     </div>
@@ -789,7 +850,7 @@
                     const item = document.createElement("div");
                     item.className = `item cursor-pointer ${activeClass}`;
                     item.innerHTML = `
-            <div class="bg-img" data-background="${project.cover}">
+            <div class="bg-img" data-background="${project.screen}">
                 <div class="cont">
                     <div class="position-relative">
                        <a href="/details/project?key=${project.key}" class="link-overlay"></a>

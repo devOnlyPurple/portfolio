@@ -18,10 +18,13 @@ router.get("/", async (req, res) => {
 
 router.get("/projects", async (req, res) => {
   try {
+    const allProjects = await Common.getProjects(); // <-- s'assurer que c'est async
+    const limitedProjects = allProjects.slice(0, 3); // <-- ne garde que les 2 premiers
+
     res.json({
       success: true,
-      message: "image cinema mise à jour avec succès",
-      data: Common.getProjects(),
+      message: "Liste des projets - Accueil",
+      data: limitedProjects,
     });
   } catch (error) {
     console.error("Erreur SQL :", error);
@@ -38,7 +41,7 @@ router.get("/project", async (req, res) => {
         message: "Veuillez renseigner la clé du projet",
       });
     }
-    const projects = await ApiRepository.getProjects();
+    const projects = await ApiRepository.getProjectsAll();
     if (projects == "error") {
       return res.status(422).json({
         success: false,
@@ -56,6 +59,19 @@ router.get("/project", async (req, res) => {
     return res.json({ success: true, data: project });
   } catch (error) {
     console.error("Erreur SQL :", error);
+    return res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+router.get("/projects/all", async (req, res) => {
+  try {
+    res.json({
+      success: true,
+      message: "Projets all",
+      data: Common.getProjects(),
+    });
+  } catch (error) {
+    console.error("Erreur  :", error);
     return res.status(500).json({ success: false, message: error.message });
   }
 });

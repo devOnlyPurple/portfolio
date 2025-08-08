@@ -13,6 +13,17 @@ class ApiRepository {
     }
   }
 
+  static async getProjectsAll() {
+    try {
+      const response = await axios.get(
+        AppConstants.BASE_URL + "/api/v1/portfolio/projects/all"
+      );
+      return response.data;
+    } catch (error) {
+      return "error";
+    }
+  }
+
   static async getProjectByKey(key) {
     try {
       const response = await axios.get(
