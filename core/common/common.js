@@ -1,5 +1,7 @@
 const AppConstants = require("../constants/app_constants");
+const axios = require("axios");
 
+require("dotenv").config();
 class Common {
   static errorModel(err) {
     return {
@@ -168,6 +170,43 @@ class Common {
   static getUrlAsset(asset) {
     if (!asset) return null;
     return `${AppConstants.BASE_URL}/${asset}`;
+  }
+
+  static async sendMailApi(email, subject, content, title, name) {
+    try {
+      const apiSecret = process.env.MAILZEET_API_SECRET;
+      let data = JSON.stringify({
+        recipients: [
+          {
+            email: email,
+            name: name,
+          },
+        ],
+        subject: subject,
+        text: title,
+        html: `<b>${content}</b>`,
+
+        params: {
+          company: "OnlyPurple",
+        },
+      });
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "https://api.mailzeet.com/v1/mails",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiSecret}`,
+        },
+        data: data,
+      };
+      const response = await axios(config); // Manquait !
+      console.log("Mailzeet response:", response.data);
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
   }
 }
 
