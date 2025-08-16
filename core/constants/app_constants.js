@@ -3,7 +3,8 @@ class AppConstants {
   static ACCESS_TOKEN_SECRET = "6HlEbB2S6sSGmxaA3HArg3RqaIADqUbY";
   static CANAL_MOBIL = "MOBIL";
   static PORT = 3000;
-  static PUBLIC_URL = "https://portfolio-qaz5.onrender.com";
+  // static PUBLIC_URL = "https://portfolio-qaz5.onrender.com";
+  static PUBLIC_URL = "https://olalekou-david-sowa.onrender.com";
   static DEFAULT_AVATAR = "default_male_avatar.png";
   static DEFAULT_AVATAR_ADMIN = "default_sad_avatar.png";
   static DEFAULT_WOMAN_ADMIN = "default_female_avatar.png";
