@@ -35,7 +35,10 @@
 
     <!-- Core Style Css -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
 
+
+    </style>
 </head>
 
 <body class="digital-agency">
@@ -152,10 +155,10 @@
 
                 <!-- ==================== Start portfolio ==================== -->
 
-                <section class="portfolio-style4 pt-70px">
+                <section class="team-style1 pb-60px box-dark">
                     <div class="container">
-                        <div class="row md-marg gallery" id="project-container">
-                            <!-- Contenu dynamique injecté ici -->
+                        <div class="row" id="projects-row">
+                            <!-- Les projets seront chargés ici dynamiquement -->
                         </div>
                     </div>
                 </section>
@@ -258,39 +261,52 @@
 
     <script>
 
-        fetch("/projects/all")
-            .then(res => res.json())
-            .then(response => {
-                const container = document.getElementById("project-container");
-                container.innerHTML = ""; // Clear previous content
-                const projects = response.data;
 
-                projects.forEach((project) => {
-                    const col = document.createElement("div");
-                    col.className = "col-lg-4 items mt-50px";
+        async function loadProjects() {
+            try {
+                const response = await fetch('/projects/all');
+                const projectss = await response.json();
+                const projects = projectss.data;
+                const projectsRow = document.getElementById('projects-row');
+                projectsRow.innerHTML = '';
 
-                    col.innerHTML = `
-        <div class="item">
-            <div class="fit-img h-450px o-hidden position-relative">
-                <img src="${project.cover}" alt="">
-                <a href="/details/project?key=${project.key}" class="link-overlay"></a>
-            </div>
-            <div class="mt-20px">
-                <h5>${project.name}</h5>
-                <div class="tags text-uppercase mt-10px">
-                    <a href="#">${project.type}</a>
-                </div>
-            </div>
-        </div>
-      `;
+                projects.forEach(project => {
+                    const projectItem = `
+                        <div class="col-lg-4">
+                            <div class="item mb-60px" onclick="redirectToProject('${project.key}')">
+                                <div class="fit-img h-350px border-radius-15px o-hidden">
+                                    <img src="${project.cover}" alt="${project.name}">
+                                </div>
+                              <a href="/details/project?key=${project.key}" class="icon" title="${project.name}">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 28.5">
+                                            <path d="M29.25.75V22.09H26.89V4.77L2.4,29.25.75,27.52,25.16,3.11H7.84V.75Z" transform="translate(-0.75 -0.75)" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="text">
+                                    <h5 class="name">${project.name}</h5>
+                                    <h6 class="position">${project.type}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    `;
 
-                    container.appendChild(col);
+                    projectsRow.innerHTML += projectItem;
                 });
-            })
-            .catch(err => {
-                console.error("Erreur lors du chargement des projets :", err);
-            });
 
+            } catch (error) {
+                console.error('Erreur lors du chargement des projets:', error);
+                document.getElementById('projects-row').innerHTML =
+                    '<div class="col-12"><p>Erreur lors du chargement des projets</p></div>';
+            }
+        }
+
+        function redirectToProject(projectKey) {
+            window.location.href = `/details/project?key=${projectKey}`;
+        }
+        // Charger les projets au chargement de la page
+        document.addEventListener('DOMContentLoaded', loadProjects);
     </script>
 </body>
 

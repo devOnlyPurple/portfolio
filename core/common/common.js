@@ -57,7 +57,7 @@ class Common {
       {
         key: 4,
         name: "Kedo Travel",
-        type: "Site web /  mobile / Chatbot",
+        type: "mobile",
         screen:
           "https://res.cloudinary.com/dr8wumlkr/image/upload/v1754335719/portfolio/l7pcsloadsbprxylumxl.jpg",
         cover:
